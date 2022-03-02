@@ -1,0 +1,1029 @@
+
+@font-face {
+    font-family: "voyage";
+    font-weight: 100;
+    src: url(./fonts/Voyage-Regular.ttf);
+}
+
+@font-face{
+    font-family: "voyage";
+    font-weight: 900;
+    src: url(./fonts/Voyage-Bold.ttf);
+}
+
+@font-face{
+    font-family: "gilroy";
+    font-weight: 500;
+    src: url(./fonts/Gilroy-Medium.otf);
+}
+
+@font-face{
+    font-family: "gilroy";
+    font-weight: 800;
+    src: url(./fonts/Gilroy-Bold.otf);
+}
+
+@font-face{
+    font-family: "tahu!";
+    font-weight: 500;
+    src: url(./fonts/Tahu!.ttf);
+}
+
+@font-face{
+    font-family: "gilroy";
+    font-weight: 400;
+    src: url(./fonts/Gilroy-Regular_0.otf);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.main{
+    width: 100%;
+    position: relative;
+   
+}
+
+.home{
+    width: 100%;
+    height: 100vh;
+    background-color: #fa7e7e;
+    position: relative;
+    overflow: hidden;
+    padding: 0  1.875em;
+}
+
+.navbar{
+    
+    height: 3.125em;
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em  1.25em;
+
+}
+
+.hamburger{
+    background-color: white;
+    height: 28px;
+    width: 28px;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fa7e7e;
+    cursor: pointer;
+    position: absolute;
+    top: .6%;
+    right: 7%;
+    z-index: 10;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+.line01{
+    height: 1.5px;
+    width: 16px;
+    background-color: #fa7e7e;
+    margin-top: .2em;    
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    
+}
+.navbar>h2{
+    font-family: voyage;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: white;
+}
+
+#cart{
+    margin-right: 1em;
+}
+
+.rgnav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid black; */
+    width: 30%;
+}
+a{
+    text-decoration: none;
+}
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.rgnav a{
+    font-family: voyage;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 12px;
+    color: white;
+    margin-right: 1em;
+    letter-spacing: 1px;
+
+
+}
+
+.rgnav i{
+    font-size: 14px;
+    color: white;
+    margin-left: 1em;
+    cursor: pointer;
+}
+
+#menu{
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 3.125em;
+    display: inline-block;
+    background-color: white;
+    color: #fa7e7e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar2{
+    height: 100vh;
+    width: 100%;
+    /* background-color: #ffe0e0; */
+    background-color: #fa7e7e;
+    position: absolute;
+    top: 0%;
+    /* left: 0%; */
+    left: -100%;
+    /* display: none; */
+    z-index: 8;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    display: flex;
+
+}
+
+.nav2left {
+    counter-reset: section;
+  }
+  
+.nav2left h1::after {
+    counter-increment: section;
+    content: "0" counter(section) ;
+    font-size: 1.3vw;
+    font-family: "gilroy";
+    font-weight: 600;
+    /* text-transform: capitalize; */
+    margin-left: 1em;
+    color: brown;
+    /* color: white; */
+
+  }
+
+.nav2left{
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    /* background-color: red; */
+}
+
+.nav2left h1{
+    font-family: "voyage";
+    font-weight: 500;
+    color: white;
+    text-transform: capitalize;
+    font-size: 6vw;
+    margin-bottom: .24em;
+    position: relative;
+    padding: .099em 0;
+    border-bottom: 2px solid white;
+    /* color: brown; */
+    color: white;
+    cursor: pointer;
+
+}
+
+.link {
+    margin-left: 4em;
+    position: relative;
+}
+.link .photu{
+    height: 200px;
+    width: 150px;
+    /* background-color: red; */
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(-80px);
+    transform: scale(0.8 , 0.8);
+    will-change: transform;
+    z-index: 8;
+    opacity: 0;
+    pointer-events: none;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+.link .photu img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* mix-blend-mode: multiply; */
+
+}
+.nav2right{
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: yellow; */
+}
+
+.nav2right .imgchange{
+    height: 300px;
+    width: 200px;
+    /* background-color: red; */
+    display: none;
+
+}
+
+.nav2right .imgchange img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.navbar2 i{
+    font-size: 14px;
+    height: 1.5em;
+    width: 1.5em;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.288);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 3em;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    border: none;
+    cursor: pointer;
+
+}
+.home>img{
+    width: 50%;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    /* z-index: 6; */
+}
+
+.text{
+    position: relative;
+    /* border: 2px solid red; */
+    top: 10%;
+    left: 0%;
+    padding: 0px 3em;
+}
+
+.heading1{
+    
+    
+    display: flex;
+    
+}
+.heading1 h1{
+    font-family: "voyage";
+    font-weight: 100;
+    font-size: 250px;
+    color: white;
+    text-transform: capitalize;
+}
+
+.heading1 h1:nth-child(1){
+    z-index: 99 !important;
+}
+
+.heading1 h1:nth-child(2){
+    margin-left: 0.36em;
+    /* z-index: 4; */
+}
+
+.text p{
+    width: 40%;
+    font-family: gilroy;
+    font-weight: 500;
+    color: white;
+    line-height: 2.5em;
+    font-size: 12px;
+    position: relative;
+    z-index: 10;
+}
+
+.sc{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    margin-top: 1.25em;
+
+}
+
+.sc i{
+    font-size: 15px;
+    height: 2em;
+    width: 2em;
+    background-color: white;
+    color: #fa7e7e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.411);
+}
+
+.sc h4{
+    font-family: gilroy;
+    font-weight: 800;
+    /* text-transform: capitalize; */
+    color: white;
+    margin-left: 0.7em;
+    font-size: 14px;
+}
+
+.lang{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 5%;
+    right: 3%;
+
+}
+
+.lang h4{
+    font-family: gilroy;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.lang h4:nth-child(1){
+    margin-right: 1.6em;
+}
+
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fa7e7e;
+    padding: 3em 0;
+    /* position: relative; */
+
+}
+
+.brandchange{
+    /* background-color: yellow; */
+    /* border: 2px solid yellow; */
+    /* position: relative; */
+    color: white;
+    margin-top: 1.9em;
+}
+
+.brandchange h2{
+    opacity: 0;
+    font-family: "voyage";
+    font-weight: 400;
+
+}
+
+.change{
+    width: 100%;
+    /* background-color: red; */
+    /* height: 12px; */
+    position: relative;
+    margin-top: 1.3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+
+}
+
+.change h3:nth-child(1){
+    opacity: 0;
+    font-family: "tahu!";
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    left: 0%;
+   
+
+}
+.change h3:nth-child(3){
+    opacity: 0;
+    font-family: "tahu!";
+    font-weight: 500;
+    /* font-size: 18px; */
+    position: relative;
+    top: 0;
+    right: 0;
+
+}
+
+.change svg{
+    font-size: 60px;
+    width: 3em;
+    margin-top: 0.1em; 
+    position: relative;
+  
+}
+
+.magth{
+    width: 100%;
+    /* background-color: red; */
+    /* height: 40px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0;
+    margin-top: 2em;
+    position: relative;
+}
+
+.magthimg{
+    position: relative;
+}
+
+
+.magthimg img{
+    font-size: 100px;
+    height: 6em;
+    filter: blur(2px);
+
+
+}
+
+.text02{
+    position: absolute;
+    top: 0%;
+    left: -15%;
+    /* background-color: teal; */
+    width: 186%;
+    /* line-height: 6em; */
+}
+
+.text02 h2{
+    font-size: 90px;
+    font-family: "voyage";
+    font-weight: 400;
+    color: white;
+    opacity: 0;
+    /* line-height: .4em; */
+}
+
+#mg{
+    font-size: 150px;
+    font-family: "voyage";
+    font-weight: 600;
+    color: white;
+    margin-top: -0.4em;
+    margin-left: -0.2em;
+    opacity: 0;
+}
+
+#special{
+    font-family: "voyage";
+    font-size: 60px;
+    color: white;
+    height: 1.3em;
+    width: 1.3em;
+    /* text-align: center; */
+    /* background-color: red; */
+    border-radius: 50%;
+    border: 0.02em solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.3em;
+    font-weight: 500;
+    opacity: 0;
+    
+}
+
+#sp{
+    font-size: 150px;
+    font-family:  "voyage";
+    font-weight: 600;
+    margin-left: .3em;
+    margin-top: -0.4em;
+    color: white;
+    /* text-transform: capitalize; */
+    opacity: 0;
+
+}
+
+
+#h2{
+    opacity: 0;
+    font-family: "voyage";
+    color: white;
+    margin-left: 0.65em;
+}
+
+.linebox{
+    width: 100%;
+    padding: 0.4em;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.lb2{
+    width: 95%;
+    /* background-color: yellow; */
+    padding: 0.4em;
+    border-top: 0.02em solid white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lb2 h3{
+    font-family: "voyage";
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+    /* font-size: 2em; */
+}
+
+.lb2 h5{
+    font-family: "gilroy";
+    font-weight: 400;
+    color: white;
+    text-transform: capitalize;
+}
+
+.right01{
+    text-align: right;
+}
+
+.prsh{
+    width: 100%;
+    padding: 2.5em 0;
+    background-color: #fa7e7e;
+}
+
+.prsh h1{
+    font-family: "voyage";
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 70px;
+    color: white;
+    line-height: 1em;
+    margin-left: 0.7em ;
+}
+
+.slider{
+    /* padding: 20px; */
+    /* width: 100%; */
+    /* width: 2580px; */
+    /* width: 0px; */
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) .8s;
+    margin-top: 2.5em;
+  
+}
+.sliderparent{
+    position: relative;
+    overflow: auto;
+    width: 100%;
+    scrollbar-width: none;
+}
+.slide{  
+    display: inline-block;
+    font-size: 60px;
+    height: 6.5em;
+    width: 5em;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) .8s;
+    will-change: transform;
+    background-color: red;
+    background-color: white;
+    margin-left: 1em;
+    background-size: cover;
+    background-position: center;
+}
+
+#one{
+    background-image: url("https://images.unsplash.com/photo-1503153181849-4e4f85a341ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80");
+  
+}
+
+#two{
+    background-image: url("https://images.unsplash.com/photo-1533616688419-b7a585564566?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80");
+}
+
+#three{
+    background-image: url("https://images.unsplash.com/photo-1603252711728-c430e4cf5b36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+}
+
+
+#four{
+    background-image: url("https://images.unsplash.com/photo-1586102489027-4ca36ffd4423?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+}
+
+#five{
+    background-image: url("https://images.unsplash.com/photo-1560607162-36ca2dffbd14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80");
+}
+
+#six{
+    background-image: url("https://images.unsplash.com/photo-1591215090199-c63b7661fd38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60");
+}
+
+#seven{
+    background-image: url("https://images.unsplash.com/photo-1593624212435-0d075a890bdb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60");
+}
+
+#eight{
+    background-image: url("https://images.unsplash.com/photo-1494058303350-0bd5a9ecc5d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60");
+}
+
+
+
+.last{
+    width: 100%;
+    padding: 3em;
+    position: relative;
+    overflow: hidden;
+    /* border: 2px solid red; */
+}
+
+.last h5{
+    font-family: "gilroy";
+    font-weight: 400;
+    text-transform: capitalize;
+    color: #444;
+
+}
+
+.last h1{
+    font-family: "voyage";
+    font-weight: 500;
+    /* text-transform: capitalize; */
+    font-size: 80px;
+    line-height: 0.8em;
+    color: #f83a3a;
+}
+
+.last p{
+    font-family: "gilroy";
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-top: 3.9em;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: rgb(43, 43, 43);
+}
+
+
+.last span{
+    color: #f83a3a;
+}
+
+#lastheading{
+    font-size: 110px;
+    /* line-height: 0.3em; */
+    margin-top: 0.5em;
+    margin-bottom: 0.6em;
+    text-transform: capitalize;
+
+}
+
+.email{
+    padding: 0.625em 0px;
+
+    /* width: 20%; */
+}
+#email{
+    border: none;
+    padding: 0.25em 0px;
+    border-bottom: 0.125em solid  rgb(175, 174, 174);
+    width: 30%;
+    outline: none;
+    font-family: "gilroy";
+    font-weight: 500;
+    color: #888;
+    letter-spacing: 0.0625em;
+
+}
+
+#copy{
+    font-family: "gilroy";
+    font-weight: 400;
+    text-transform: capitalize;
+    color: rgb(122, 122, 122);
+    margin-top: 5em;
+    font-size: 10px;
+}
+
+.getin{
+    margin-top: 3.9em;
+    /* border: 2px solid red; */
+}
+
+#follow{
+    display: flex;
+    align-items: center;
+    margin-top: 3.2em;
+
+}
+
+#follow h4{
+    font-family: "gilroy";
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 14px;
+    color: #f83a3a;
+
+}
+
+#follow i{
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 0.625em;
+    color: #888;
+    cursor: pointer;
+}
+
+
+#lastimg{
+    font-size: 100px;
+    height: 4em;
+    position: absolute;
+    /* top: 40%; */
+    bottom: 0%;
+    right: -6%;
+}
+
+.line{
+    position: absolute;
+    top: 40%;
+    /* transform: translate(0 , -50%); */
+    transform: translate(0,-50%);
+    height: 2px;
+    width: 40%;
+    background-color: red;
+    background-color: #f83a3a;
+    display: none;
+}
+
+
+@media(max-width:500px){
+    .rgnav a{
+        display: none;
+    }
+    .navbar{
+        padding: 0.5em  0.525em;
+    }
+    .home{
+        padding: 0  0.525em;
+    }
+    .navbar2 i{
+        top: 2%;
+    }
+
+    .home #flower{
+        width: 132%;
+        left: -18%;
+        /* bottom: -32%; */
+        top: 34%;
+    }
+
+    .text{
+        padding: 0 1em;
+        margin-top: 2em;
+    }
+
+    .text .heading1{
+        /* display: initial; */
+        flex-direction: column;
+        position: relative;
+        /* z-index: 99; */
+    }
+
+    .text .heading1 h1:nth-child(1){
+        font-size: 90px;
+        font-weight: 900;
+
+
+    }
+
+    .text .heading1 h1:nth-child(2){
+        /* color: yellow; */
+        font-size: 90px;
+        font-weight: 500;
+        margin-left: 0em;
+        line-height: .8em;
+    }
+
+    .text p{
+        width: 98%;
+        font-size: 12px;
+        margin-top: 4em;
+        line-height: 2em;
+    }
+    .text .sc{
+        margin-top: 3em;
+    }
+
+    .lang{
+ 
+        cursor: pointer;
+        bottom: 1%;
+        right: 5%;
+    }
+
+    .sc{
+        position: relative;
+        z-index: 9;
+    }
+
+
+    .sc i{
+        height: 1.5em;
+        width: 1.5em;
+     
+
+    }
+
+    .sc h4{
+        font-size: 12px;
+        /* color: #f83a3a; */
+    }
+
+    /* .sc h4 span{
+        color: #f83a3a;
+    } */
+
+    .change h3:nth-child(1){
+        font-size: 21px ;
+    }
+
+    .change h3:nth-child(3){
+        font-size: 21px ;
+    }
+
+    .magthimg img{
+        height: 3.5em;
+        filter: blur(2px);
+    }
+
+    .text02{
+        left: 0%;
+    }
+    #mg{
+        font-size: 57px;
+        margin-left: 0.1em;
+        line-height: .9em;
+    }
+
+    .text02 h2{
+        font-size: 50px;
+    }
+
+    #special{
+        font-size: 36px;
+        margin-top: .6em;
+    }
+
+    #sp{
+        font-size: 48px;
+        margin-left: .2em;
+    }
+
+    #h2{
+        font-size: 50px;
+        margin-left: 0em;
+    }
+
+    .text02{
+        width: 108%;
+    }
+
+    .lb2 h5{
+        font-size: 12px;
+        margin-top: .5em;
+    }
+
+    .lb2 h3{
+        font-weight: 900;
+    }
+
+    .prsh h1{
+        font-size: 48px;
+        margin-left: 0.6em;
+    }
+
+    .slide{
+        font-size: 54px;
+        margin-left: .6em;
+    }
+
+    .last{
+        padding: 1em;
+    }
+
+    #lastimg{
+        font-size: 60px;
+        right: -10%;
+        bottom: -10%;
+    }
+
+    .last p{
+        margin-top: 3.9em;
+        font-size: 14px;
+    }
+
+    #email{
+        width: 90%;
+    }
+
+    #lastheading{
+        font-size: 90px;
+    }
+
+    .touch{
+        margin-left: 1.6em;
+    }
+
+    .last h1{
+        line-height: 1em;
+    }
+
+    #follow{
+        margin-top: 2em;
+    }
+
+    .line{
+        display: initial;
+    }
+
+    .hamburger{
+        top: .5%;
+        right: 15%;
+    }
+
+    .nav2right{
+        display: none;
+    }
+
+    .nav2left{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .nav2left .link{
+        margin-left: 0em;
+    
+    }
+    
+
+    .nav2left .link h1{
+        font-size: 10vw;
+        border-bottom: none;
+        margin-bottom: 1em;
+    }
+
+      
+    .nav2left h1::after{
+        font-size: 3vw;
+    }
+
+}
+
+
